@@ -13,11 +13,12 @@ import { DatePicker } from "antd";
 import { FiSearch } from "react-icons/fi";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Bookings = () => {
   const router = useRouter();
   const { bookings } = router.query;
-  //   console.log(bookings);
+    console.log(bookings);
   // const [token, setToken] = useState("");
   const [bookingDate, setBookingDate] = useState("");
   const [arrivalDate, setArrivalDate] = useState("");
@@ -40,16 +41,28 @@ const Bookings = () => {
     // console.log(data);
     setBookingData(data);
   };
-  
+
   useEffect(() => {
+    // const token = localStorage.getItem("token");
+    // console.log(token)
     let bookingPageToken = localStorage.getItem("token");
     if (bookingPageToken && bookings !== undefined) {
       // if (bookings !== undefined) {
-        getBookings(bookingPageToken);
+      getBookings(bookingPageToken);
       // }
     }
   }, [router]);
   //   console.log(bookingData);
+  const back = (e) => {
+    
+    const token = localStorage.getItem("token");
+    e.preventDefault()
+    if (token) {
+      localStorage.setItem("token", token);
+      router.push(`/crs/${bookings}`);
+      // router.push(`/csr/${bookings}`)
+    }
+  }
 
   return (
     <>
@@ -63,9 +76,15 @@ const Bookings = () => {
           style={{ backgroundColor: "#7b75a3" }}
         >
           <div className="flex" style={{ width: "100%" }}>
-            <div className="flex items-center w-[50%]">
-              <BsFillArrowLeftCircleFill size={26} />
-              <h4 className="ml-4">Booking Management</h4>
+            <div className="flex gap-2 items-center ml-4 w-[50%]">
+              <div>
+                {/* <Link href={`/csr/${bookings}`}> */}
+                <BsFillArrowLeftCircleFill onClick={back} size={26} />
+                {/* </Link> */}
+              </div>
+              <div>
+                <h2 className="mt-2.5">Booking Management</h2>
+              </div>
             </div>
             <div className="flex w-[50%]">
               <label
@@ -75,30 +94,27 @@ const Bookings = () => {
                 Search
               </label>
               <div className="relative w-full">
-                <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                  <svg
-                    aria-hidden="true"
-                    className="w-5 h-5 text-gray-500 dark:text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    ></path>
-                  </svg>
-                </div>
-                <input
-                  type="search"
-                  id="default-search"
-                  className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Search Bookings"
-                  required
-                />
+                <label className="relative block">
+                  <span className="sr-only">Search</span>
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                    <svg
+                      aria-hidden="true"
+                      className="w-5 h-5 mr-5 text-gray-500 dark:text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <input className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search" />
+                </label>
               </div>
             </div>
           </div>

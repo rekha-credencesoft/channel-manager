@@ -50,9 +50,11 @@ const Login = () => {
           )
             .then((res) => res.json())
             .then((resJson) => {
-              if (radio === "crs") {
+              let token = localStorage.getItem("token");
+
+              if (radio === "crs" && token) {
                 router.push(`/crs/${resJson.bookonePropertyId}`);
-              } else if (radio === "cm") {
+              } else if (radio === "cm" && token) {
                 router.push(
                   `/onlinetravelagencies/Agoda/${resJson.bookonePropertyId}`
                 );
