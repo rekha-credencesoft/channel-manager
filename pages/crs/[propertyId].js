@@ -536,7 +536,7 @@ export default function PropertyId() {
               </Col>
             </Row>
           </div>
-          <Row className={`${styles.content} py-2`}>
+          <Row className={`py-2`}>
             {/* <Col className={styles.Icon}></Col> */}
             <Col className={styles.leftSection} style={{ border: "none" }}>
               <Col className={styles.buttons}>
