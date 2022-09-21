@@ -55,9 +55,7 @@ const Login = () => {
               if (radio === "crs" && token) {
                 router.push(`/crs/${resJson.bookonePropertyId}`);
               } else if (radio === "cm" && token) {
-                router.push(
-                  `/onlinetravelagencies/Agoda/${resJson.bookonePropertyId}`
-                );
+                router.push(`/cm/${resJson.bookonePropertyId}`);
               }
               //   console.log(resJson.propertiesOnlineTravelAgencies);
               //   for (
@@ -139,11 +137,19 @@ const Login = () => {
                 </Form.Group>
                 <div className="flex gap-3 ml-1">
                   <div className="flex gap-1">
-                    <input type="radio" name="radio" onClick={() => setRadio("crs")} />
+                    <input
+                      type="radio"
+                      name="radio"
+                      onClick={() => setRadio("crs")}
+                    />
                     <label>CRS</label>
                   </div>
                   <div className="flex gap-1">
-                    <input type="radio" name="radio" onClick={() => setRadio("cm")} />
+                    <input
+                      type="radio"
+                      name="radio"
+                      onClick={() => setRadio("cm")}
+                    />
                     <label>CM</label>
                   </div>
                 </div>
