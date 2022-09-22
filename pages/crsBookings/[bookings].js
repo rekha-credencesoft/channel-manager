@@ -84,15 +84,14 @@ const Bookings = () => {
   }, [router]);
   //   console.log(bookingData);
   const back = (e) => {
-
     const token = localStorage.getItem("token");
-    e.preventDefault()
+    e.preventDefault();
     if (token) {
       localStorage.setItem("token", token);
       router.push(`/crs/${bookings}`);
       // router.push(`/csr/${bookings}`)
     }
-  }
+  };
 
   const filteredRoomByStatus = [];
   const filteredRoomBySource = [];
@@ -167,7 +166,13 @@ const Bookings = () => {
                       ></path>
                     </svg>
                   </span>
-                  <input onChange={(e) => setSearchData(e.target.value)} className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for a booking..." type="text" name="search" />
+                  <input
+                    onChange={(e) => setSearchData(e.target.value)}
+                    className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                    placeholder="Search for a booking..."
+                    type="text"
+                    name="search"
+                  />
                 </label>
               </div>
             </div>
@@ -192,7 +197,9 @@ const Bookings = () => {
               </div>
               <div className="flex items-center justify-between my-4">
                 <div
-                  onClick={() => { setFilterRoomTypeShow(!filterRoomTypeShow) }}
+                  onClick={() => {
+                    setFilterRoomTypeShow(!filterRoomTypeShow);
+                  }}
                   className="flex relative border items-center justify-between p-2 rounded shadow-sm w-96 mx-2"
                 >
                   <button className="mr-2">
@@ -205,7 +212,9 @@ const Bookings = () => {
                     <div className="absolute bg-white top-10 left-0 p-2 w-full drop-shadow-lg rounded">
                       <>
                         <div
-                          onClick={() => { setFilteredRoomType("") }}
+                          onClick={() => {
+                            setFilteredRoomType("");
+                          }}
                           className="hover:bg-purple-600 hover:text-white decoration-none p-1 rounded font-semibold p-2"
                         >
                           All
@@ -213,8 +222,14 @@ const Bookings = () => {
                         {filteredRoomsByType.map((filteredRoomType, key) => {
                           return (
                             <div
-                              onClick={() => { setFilteredRoomType(filteredRoomType); setFilteredStatusRoom(""); setFilteredSourceRoom(""); setArrivalDate(""); setBookingDate(""); setDepartureDate("") }
-                              }
+                              onClick={() => {
+                                setFilteredRoomType(filteredRoomType);
+                                setFilteredStatusRoom("");
+                                setFilteredSourceRoom("");
+                                setArrivalDate("");
+                                setBookingDate("");
+                                setDepartureDate("");
+                              }}
                               key={key}
                               className="hover:bg-purple-600 hover:text-white decoration-none p-1 rounded font-semibold p-2"
                             >
@@ -228,8 +243,11 @@ const Bookings = () => {
                 </div>
 
                 <div
-                  onClick={() => { setFilterBookingStatusTypeShow(!filterBookingStatusTypeShow) }
-                  }
+                  onClick={() => {
+                    setFilterBookingStatusTypeShow(
+                      !filterBookingStatusTypeShow
+                    );
+                  }}
                   className="flex relative border items-center justify-between p-2 rounded shadow-sm w-96 mx-2"
                 >
                   <button className="mr-2">
@@ -250,8 +268,14 @@ const Bookings = () => {
                         {filteredRoomByStatus.map((filteredStatus, key) => {
                           return (
                             <div
-                              onClick={() => { setFilteredStatusRoom(filteredStatus); setFilteredRoomType(""); setFilteredSourceRoom(""); setArrivalDate(""); setBookingDate(""); setDepartureDate("") }
-                              }
+                              onClick={() => {
+                                setFilteredStatusRoom(filteredStatus);
+                                setFilteredRoomType("");
+                                setFilteredSourceRoom("");
+                                setArrivalDate("");
+                                setBookingDate("");
+                                setDepartureDate("");
+                              }}
                               key={key}
                               className="hover:bg-purple-600 hover:text-white decoration-none p-1 rounded font-semibold"
                             >
@@ -289,8 +313,14 @@ const Bookings = () => {
                         {filteredRoomBySource.map((filteredSource, key) => {
                           return (
                             <div
-                              onClick={() => { setFilteredSourceRoom(filteredSource); setFilteredStatusRoom(""); setFilteredRoomType(""); setArrivalDate(""); setBookingDate(""); setDepartureDate("") }
-                              }
+                              onClick={() => {
+                                setFilteredSourceRoom(filteredSource);
+                                setFilteredStatusRoom("");
+                                setFilteredRoomType("");
+                                setArrivalDate("");
+                                setBookingDate("");
+                                setDepartureDate("");
+                              }}
                               key={key}
                               className="hover:bg-purple-600 hover:text-white decoration-none p-1 rounded font-semibold"
                             >
@@ -305,7 +335,9 @@ const Bookings = () => {
                 <DatePicker
                   className="h-10 w-96 mx-2"
                   size="small"
-                  placeholder={bookingDate !== "" ? bookingDate : "Booking Date"}
+                  placeholder={
+                    bookingDate !== "" ? bookingDate : "Booking Date"
+                  }
                   value={0}
                   onClick={() => {
                     setFilteredRoomType("");
@@ -317,14 +349,18 @@ const Bookings = () => {
                   onChange={(value) => {
                     // console.log("booo d", value.toLocaleString().split(" ").splice(0,4).join(" "))
                     // const bookDate = moment(value).format("DD-MM-YYYY");
-                    setBookingDate(value.toLocaleString().split(" ").splice(0, 4).join(" "));
+                    setBookingDate(
+                      value.toLocaleString().split(" ").splice(0, 4).join(" ")
+                    );
                   }}
-                // value={bookingDate}
+                  // value={bookingDate}
                 />
                 <DatePicker
                   className="h-10 w-96 mx-2"
                   size="small"
-                  placeholder={arrivalDate !== "" ? arrivalDate : "Arrival Date"}
+                  placeholder={
+                    arrivalDate !== "" ? arrivalDate : "Arrival Date"
+                  }
                   value={0}
                   onClick={() => {
                     setFilteredRoomType("");
@@ -337,12 +373,14 @@ const Bookings = () => {
                     const arrDate = moment(value).format("DD-MM-YYYY");
                     setArrivalDate(arrDate);
                   }}
-                // value={arrivalDate}
+                  // value={arrivalDate}
                 />
                 <DatePicker
                   className="h-10 w-96 mx-2"
                   size="small"
-                  placeholder={departureDate !== "" ? departureDate : "Departure Date"}
+                  placeholder={
+                    departureDate !== "" ? departureDate : "Departure Date"
+                  }
                   value={0}
                   onClick={() => {
                     setFilteredRoomType("");
@@ -355,7 +393,7 @@ const Bookings = () => {
                     const depDate = moment(value).format("DD-MM-YYYY");
                     setDepartureDate(depDate);
                   }}
-                // value={departureDate}
+                  // value={departureDate}
                 />
               </div>
               <div className="overflow-x-auto shadow-md sm:rounded-lg">
@@ -404,107 +442,62 @@ const Bookings = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {bookingData?.filter((s) => {
-                      let fDate = new Date(s.fromDate).toDateString().split(" ").join("").toLowerCase()
-                      let tDate = new Date(s.toDate).toDateString().split(" ").join("").toLowerCase()
-                      let roomNo = parseInt(s.roomNumbers).toString().toLowerCase()
-                      let site = s.externalSite
-                      console.log(s)
-                      if (searchData === "") {
-                        return "No result found"
-                      } else if (s.externalSite > 10000000000 || s.propertyReservationNumber.toLowerCase().includes(searchData.toLowerCase()) || s.firstName.toLowerCase().includes(searchData.toLowerCase()) || s.lastName.toLowerCase().includes(searchData.toLowerCase()) || fDate.includes(searchData) || tDate.includes(searchData) || s.roomName.toLowerCase().includes(searchData.toLowerCase()) || roomNo.includes(searchData.toLowerCase()) || s.bookingStatus.toLowerCase().includes(searchData.toLowerCase()) || s.notes?.toLowerCase().includes(searchData.toLowerCase())) {
-                        return s
-                      }
-                    }).map((val, i) => {
-                      // console.log(val.fromDate)
-                      return (
-                        <>
-                          {filteredRoomType === "" && filteredStatusRoom === "" && filteredSourceRoom === "" && bookingDate === "" && arrivalDate === "" && departureDate === "" ? (
-                            <tr
-                              key={i}
-                              className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
-                            >
-                              <td className="py-4 px-6 text-black font-semibold">
-                                {val.propertyReservationNumber}
-                              </td>
-                              <td className="py-4 px-6 font-bold">
-                                {`${val.firstName}`.charAt(0).toUpperCase() +
-                                  `${val.firstName}`.slice(1)}{" "}
-                                {`${val.lastName}`.charAt(0).toUpperCase() +
-                                  `${val.lastName}`.slice(1)}
-                              </td>
-                              <td className="py-4 px-6">
-                                {new Date(val.fromDate).toDateString()}
-                              </td>
-                              <td className="py-4 px-6">
-                                {new Date(val.toDate).toDateString()}
-                              </td>
-                              <td className="py-4 px-6">
-                                {new Date(val.fromDate)
-                                  .toLocaleString("en-GB")
-                                  .split(",")
-                                  .splice(0, 1)
-                                  .join("")
-                                  .split("/")
-                                  .join("-")}
-                              </td>
-                              <td className="py-4 px-6">
-                                {new Date(val.toDate)
-                                  .toLocaleString("en-GB")
-                                  .split(",")
-                                  .splice(0, 1)
-                                  .join("")
-                                  .split("/")
-                                  .join("-")}
-                              </td>
-                              <td className="py-4 px-6">{val.roomName}</td>
-                              <td className="py-4 px-6">
-                                {val.roomNumbers === null
-                                  ? "null"
-                                  : val.roomNumbers}
-                              </td>
-
-                              {val.externalSite == "Walkin" ? (
-                                <td className="py-4 px-6">
-                                  <div className="flex items-center justify-evenly px-1 py-1 bg-green-400 text-white font-semibold rounded">
-                                    <FaShoePrints />
-                                    <div>Walkin</div>
-                                  </div>
-                                </td>
-                              ) : val.externalSite == "Website" ? (
-                                <td className="py-4 px-6">
-                                  <div className="flex items-center justify-evenly px-1 py-1 bg-blue-400 text-white font-semibold rounded">
-                                    <BsGlobe />
-                                    <div>Website</div>
-                                  </div>
-                                </td>
-                              ) : val.externalSite === null ? (
-                                <td className="py-4 px-6">No-Source</td>
-                              ) : (
-                                ""
-                              )}
-                              <td className="py-4 px-6">{val.bookingStatus}</td>
-                              <td className="py-4 px-6">{val.payableAmount}</td>
-                              <td className="py-4 px-6">
-                                {val.notes == null ? "No Notes" : val.notes}
-                              </td>
-                            </tr>
-                          ) : (
-                            filteredRoomType === val.roomName || filteredStatusRoom === val.bookingStatus || filteredSourceRoom === val.externalSite ||
-                              bookingDate === new Date(val.fromDate).toDateString() ||
-                              arrivalDate === new Date(val.fromDate)
-                                .toLocaleString("en-GB")
-                                .split(",")
-                                .splice(0, 1)
-                                .join("")
-                                .split("/")
-                                .join("-") || departureDate === new Date(val.toDate)
-                                  .toLocaleString("en-GB")
-                                  .split(",")
-                                  .splice(0, 1)
-                                  .join("")
-                                  .split("/")
-                                  .join("-") ?
+                    {bookingData
+                      ?.filter((s) => {
+                        let fDate = new Date(s.fromDate)
+                          .toDateString()
+                          .split(" ")
+                          .join("")
+                          .toLowerCase();
+                        let tDate = new Date(s.toDate)
+                          .toDateString()
+                          .split(" ")
+                          .join("")
+                          .toLowerCase();
+                        let roomNo = parseInt(s.roomNumbers)
+                          .toString()
+                          .toLowerCase();
+                        let site = s.externalSite;
+                        console.log(s);
+                        if (searchData === "") {
+                          return "No result found";
+                        } else if (
+                          s.externalSite > 10000000000 ||
+                          s.propertyReservationNumber
+                            .toLowerCase()
+                            .includes(searchData.toLowerCase()) ||
+                          s.firstName
+                            .toLowerCase()
+                            .includes(searchData.toLowerCase()) ||
+                          s.lastName
+                            .toLowerCase()
+                            .includes(searchData.toLowerCase()) ||
+                          fDate.includes(searchData) ||
+                          tDate.includes(searchData) ||
+                          s.roomName
+                            .toLowerCase()
+                            .includes(searchData.toLowerCase()) ||
+                          roomNo.includes(searchData.toLowerCase()) ||
+                          s.bookingStatus
+                            .toLowerCase()
+                            .includes(searchData.toLowerCase()) ||
+                          s.notes
+                            ?.toLowerCase()
+                            .includes(searchData.toLowerCase())
+                        ) {
+                          return s;
+                        }
+                      })
+                      .map((val, i) => {
+                        // console.log(val.fromDate)
+                        return (
+                          <>
+                            {filteredRoomType === "" &&
+                            filteredStatusRoom === "" &&
+                            filteredSourceRoom === "" &&
+                            bookingDate === "" &&
+                            arrivalDate === "" &&
+                            departureDate === "" ? (
                               <tr
                                 key={i}
                                 className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
@@ -578,7 +571,28 @@ const Bookings = () => {
                                   {val.notes == null ? "No Notes" : val.notes}
                                 </td>
                               </tr>
-                              : filteredStatusRoom === val.bookingStatus ? <tr
+                            ) : filteredRoomType === val.roomName ||
+                              filteredStatusRoom === val.bookingStatus ||
+                              filteredSourceRoom === val.externalSite ||
+                              bookingDate ===
+                                new Date(val.fromDate).toDateString() ||
+                              arrivalDate ===
+                                new Date(val.fromDate)
+                                  .toLocaleString("en-GB")
+                                  .split(",")
+                                  .splice(0, 1)
+                                  .join("")
+                                  .split("/")
+                                  .join("-") ||
+                              departureDate ===
+                                new Date(val.toDate)
+                                  .toLocaleString("en-GB")
+                                  .split(",")
+                                  .splice(0, 1)
+                                  .join("")
+                                  .split("/")
+                                  .join("-") ? (
+                              <tr
                                 key={i}
                                 className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
                               >
@@ -650,11 +664,87 @@ const Bookings = () => {
                                 <td className="py-4 px-6">
                                   {val.notes == null ? "No Notes" : val.notes}
                                 </td>
-                              </tr> : ""
-                          )}
-                        </>
-                      );
-                    })}
+                              </tr>
+                            ) : filteredStatusRoom === val.bookingStatus ? (
+                              <tr
+                                key={i}
+                                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+                              >
+                                <td className="py-4 px-6 text-black font-semibold">
+                                  {val.propertyReservationNumber}
+                                </td>
+                                <td className="py-4 px-6 font-bold">
+                                  {`${val.firstName}`.charAt(0).toUpperCase() +
+                                    `${val.firstName}`.slice(1)}{" "}
+                                  {`${val.lastName}`.charAt(0).toUpperCase() +
+                                    `${val.lastName}`.slice(1)}
+                                </td>
+                                <td className="py-4 px-6">
+                                  {new Date(val.fromDate).toDateString()}
+                                </td>
+                                <td className="py-4 px-6">
+                                  {new Date(val.toDate).toDateString()}
+                                </td>
+                                <td className="py-4 px-6">
+                                  {new Date(val.fromDate)
+                                    .toLocaleString("en-GB")
+                                    .split(",")
+                                    .splice(0, 1)
+                                    .join("")
+                                    .split("/")
+                                    .join("-")}
+                                </td>
+                                <td className="py-4 px-6">
+                                  {new Date(val.toDate)
+                                    .toLocaleString("en-GB")
+                                    .split(",")
+                                    .splice(0, 1)
+                                    .join("")
+                                    .split("/")
+                                    .join("-")}
+                                </td>
+                                <td className="py-4 px-6">{val.roomName}</td>
+                                <td className="py-4 px-6">
+                                  {val.roomNumbers === null
+                                    ? "null"
+                                    : val.roomNumbers}
+                                </td>
+
+                                {val.externalSite == "Walkin" ? (
+                                  <td className="py-4 px-6">
+                                    <div className="flex items-center justify-evenly px-1 py-1 bg-green-400 text-white font-semibold rounded">
+                                      <FaShoePrints />
+                                      <div>Walkin</div>
+                                    </div>
+                                  </td>
+                                ) : val.externalSite == "Website" ? (
+                                  <td className="py-4 px-6">
+                                    <div className="flex items-center justify-evenly px-1 py-1 bg-blue-400 text-white font-semibold rounded">
+                                      <BsGlobe />
+                                      <div>Website</div>
+                                    </div>
+                                  </td>
+                                ) : val.externalSite === null ? (
+                                  <td className="py-4 px-6">No-Source</td>
+                                ) : (
+                                  ""
+                                )}
+                                <td className="py-4 px-6">
+                                  {val.bookingStatus}
+                                </td>
+                                <td className="py-4 px-6">
+                                  {val.payableAmount}
+                                </td>
+                                <td className="py-4 px-6">
+                                  {val.notes == null ? "No Notes" : val.notes}
+                                </td>
+                              </tr>
+                            ) : (
+                              ""
+                            )}
+                          </>
+                        );
+                      })}
                   </tbody>
                 </table>
               </div>

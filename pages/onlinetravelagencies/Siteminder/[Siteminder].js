@@ -100,7 +100,7 @@ const Siteminder = ({ showTravelAgencyName, setShowTravelAgencyName }) => {
 
   const changeLocation = (showTravelAgencyName) => {
     if (showTravelAgencyName.onlineTravelAgencyName === "Agoda") {
-    //   setShowTravelAgencyName(showTravelAgencyName);
+      //   setShowTravelAgencyName(showTravelAgencyName);
       //   localStorage.setItem('travelAgency',JSON.stringify(showTravelAgencyName));
       router.push(`/onlinetravelagencies/Agoda/${Siteminder}`);
       // setShowTravelAgencyName(JSON.parse(localStorage.getItem('travelAgency')));
@@ -378,8 +378,6 @@ const Siteminder = ({ showTravelAgencyName, setShowTravelAgencyName }) => {
 
 export default Siteminder;
 
-
-
 // export async function getStaticPaths() {
 //   const res = await fetch(
 //    "https://api.bookonelocal.in/api-bookone/api/organisation/1/properties",
@@ -391,7 +389,7 @@ export default Siteminder;
 //         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib29rb25ldGVzdGJ1c2luZXNzQGdtYWlsLmNvbSIsInNjb3BlcyI6IlJPTEVfUFJPUF9BRE1JTiIsImlhdCI6MTY2MjM1MDUyOCwiZXhwIjoxNjYyNzgyNTI4fQ.vqgyvrlAS78mqdbIsaPlissypDn_ISVqctARKG5w0YE",
 //         APP_ID: "BOOKONE_WEB_APP",
 //         User_Id:"1",
-        
+
 //       },
 //     }
 //   );
@@ -402,17 +400,17 @@ export default Siteminder;
 //   })
 //   console.log(d)
 //   // const mapping = data.map((val, i) => {
-    
+
 //   //     if(val.id > "600"){
 //   //       console.log(true)
 //   //     }
 //   //     else{
 //   //       console.log(false)
 //   //     }
-    
+
 //   // })
 //   // console.log(mapping)
-  
+
 //   // setDataOne(data)
 //   const paths = data.map((a)=>{
 //     return {
@@ -429,7 +427,7 @@ export default Siteminder;
 //   console.log(context)
 //   return {
 //     props: {
-      
+
 //     }, // will be passed to the page component as props
 //   }
 // }

@@ -276,7 +276,6 @@
 //     }
 //   };
 
-
 //   useEffect(() => {
 //     if (propertyId !== undefined) {
 //       let currentDateFuncResponse = getCurrentDateFunction();
@@ -316,7 +315,6 @@
 //   const handleRatesAvailiblityDropDown = () => {
 //     setAllRatesAvailiblityDropDown(!allRatesAvailiblityDropDown);
 //   };
-
 
 //   return (
 //     <div className={styles.outerContainer}>
@@ -995,4 +993,3 @@
 //     </div>
 //   );
 // }
-

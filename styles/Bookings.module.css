@@ -1,253 +1,252 @@
-.bookingsOuterContainer{
-    background-color: #EAF5FF;
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden ;
+.bookingsOuterContainer {
+  background-color: #eaf5ff;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.bookingsMainContainer{
-    padding: 2vh 4vw;
-    padding-top: 0;
+.bookingsMainContainer {
+  padding: 2vh 4vw;
+  padding-top: 0;
 }
 
-.bookingsSearchSection{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 8vh 0;
-    padding-bottom: 6vh;
-    padding-right: 1.5vh;
-    z-index: 1;
-    color: #fff;
+.bookingsSearchSection {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 8vh 0;
+  padding-bottom: 6vh;
+  padding-right: 1.5vh;
+  z-index: 1;
+  color: #fff;
 }
 
-.bookingsSearchSection::before{
-    content: '';
-    top: 0;
-    left: -100px;
-    right: -100px;
-    bottom: -70px;
-    background-color: #2494d1;
-    position: absolute;
-    z-index: -1;
+.bookingsSearchSection::before {
+  content: "";
+  top: 0;
+  left: -100px;
+  right: -100px;
+  bottom: -70px;
+  background-color: #2494d1;
+  position: absolute;
+  z-index: -1;
 }
-
 
 .bookingsSearchSection > span {
-    font-size: x-large;
-    display: flex;
-    align-items: center;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
 }
 
-.bookingsSearchSectionBookingsMngmtIcon{
-    margin-right: 0.5vw;
-    cursor: pointer;
+.bookingsSearchSectionBookingsMngmtIcon {
+  margin-right: 0.5vw;
+  cursor: pointer;
 }
 
-.bookingsSearchSectionBookingsInputSpan{
-    background-color: #fff;
-    margin-left: 8vw;
-    margin-right: 20px;
-    border-radius: 10px;
-    padding: 2.5vh 5vw;
-    box-shadow: 0px 3px 6px 0px rgb(59, 66, 120);
-    color: black;
+.bookingsSearchSectionBookingsInputSpan {
+  background-color: #fff;
+  margin-left: 8vw;
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 2.5vh 5vw;
+  box-shadow: 0px 3px 6px 0px rgb(59, 66, 120);
+  color: black;
 }
 
-.bookingsSearchSectionInput{
-    width: 100%;
-    border: 0;
-    font-size: medium;
-    height: 100%;
+.bookingsSearchSectionInput {
+  width: 100%;
+  border: 0;
+  font-size: medium;
+  height: 100%;
 }
 
-.bookingsSearchSectionIcon{
-    margin-left: 1vw;
-    margin-right: 1vw;
-    height: 100%;
+.bookingsSearchSectionIcon {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  height: 100%;
 }
 
-.bookingsTableSection{
-    position: relative;
-    background-color: #fff;
-    padding: 1vh 1vw;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-    border-radius: 8px;
-    box-shadow: 0px 3px 6px 0px rgb(150, 150, 150);
-    z-index: 1;
+.bookingsTableSection {
+  position: relative;
+  background-color: #fff;
+  padding: 1vh 1vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px 0px rgb(150, 150, 150);
+  z-index: 1;
 }
 
-.bookingsTableButtonsSection{
-    display: flex;
-    justify-content: space-between;
+.bookingsTableButtonsSection {
+  display: flex;
+  justify-content: space-between;
 }
 
 .bookingsTableButtonsSection > button {
-    display: flex;
-    align-items: center;
-    padding: 1.5vh 1vw;
-    border-radius: 5px;
-    border: 1px solid #2494d1;
-    background-color: #2494d1;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1.5vh 1vw;
+  border-radius: 5px;
+  border: 1px solid #2494d1;
+  background-color: #2494d1;
+  color: #fff;
 }
 
-.bookingsTableButtonIcon{
-    margin-right: 0.5vw;
+.bookingsTableButtonIcon {
+  margin-right: 0.5vw;
 }
 
-.bookingsTableButtonsGroup > button{
-    /* display: flex;
+.bookingsTableButtonsGroup > button {
+  /* display: flex;
     align-items: center; */
-    margin: 0 0.5vw;
-    padding: 1.5vh 1vw;
-    border-radius: 5px;
-    border: 1px solid #2494d1;
-    background-color: #fff;
-    color: #2494d1;
+  margin: 0 0.5vw;
+  padding: 1.5vh 1vw;
+  border-radius: 5px;
+  border: 1px solid #2494d1;
+  background-color: #fff;
+  color: #2494d1;
 }
 
-.bookingsTableButtonsGroup > button:hover{
-    border: 1px solid #2494d1;
-    background-color: #2494d1;
-    color: #fff;;
+.bookingsTableButtonsGroup > button:hover {
+  border: 1px solid #2494d1;
+  background-color: #2494d1;
+  color: #fff;
 }
 
-.bookingsTableDropdownsSection{
-    display: flex;
-    justify-content: space-between;
-    margin: 3.5vh 0;
+.bookingsTableDropdownsSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 3.5vh 0;
 }
 
 .bookingsTableDropdownsSection > span {
-    background-color: #fff;
-    border: 2px solid rgb(169, 169, 169);
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    padding: 0 1vw;
+  background-color: #fff;
+  border: 2px solid rgb(169, 169, 169);
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 1vw;
 }
 
 .bookingsTableDropdownsSection > div {
-    position: relative;
-    background-color: #fff;
-    border: 2px solid rgb(169, 169, 169);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 5px;
-    /* padding: 0 1vw; */
+  position: relative;
+  background-color: #fff;
+  border: 2px solid rgb(169, 169, 169);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  /* padding: 0 1vw; */
 }
 
-.bookingsTableDropdownsSection > div > div > div > input{
-    border: none;
-    padding: 0 1vw;
-    padding-right: 0;
-    width: 100%;
+.bookingsTableDropdownsSection > div > div > div > input {
+  border: none;
+  padding: 0 1vw;
+  padding-right: 0;
+  width: 100%;
 }
 
-.bookingsTableDropdownsSection > div > svg{
-    position: absolute;
-    right: 20px;
+.bookingsTableDropdownsSection > div > svg {
+  position: absolute;
+  right: 20px;
 }
 
 .bookingsTableDropdownsSection > button {
-    padding: 1vh 1.5vw;
-    border: 1px solid #2494d1;
-    background-color: #2494d1;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 3px 6px 0px rgb(150, 150, 150);
+  padding: 1vh 1.5vw;
+  border: 1px solid #2494d1;
+  background-color: #2494d1;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 0px rgb(150, 150, 150);
 }
 
-.bookingsTableDropdown{
-    position: relative;
-    color: gray;
-    cursor: pointer;
+.bookingsTableDropdown {
+  position: relative;
+  color: gray;
+  cursor: pointer;
 }
 
-.bookingsTableDropdown:hover{
-    border: 2px solid black;
+.bookingsTableDropdown:hover {
+  border: 2px solid black;
 }
 
 .bookingsTableDropdown > span {
-    color: black;
+  color: black;
 }
 
-.bookingsTableDropdown > ul{
-   position: absolute;
-   top: 30px;
-   left: 0;
-   right: 0;
-   background-color: #fff;
-   padding: 0 0;
-   margin: 0;
-    border-radius: 5px;
-    box-shadow: 0px 3px 6px 0px rgb(150, 150, 150);
-    height: 25vh;
-    overflow-y: auto;
+.bookingsTableDropdown > ul {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 0 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 0px rgb(150, 150, 150);
+  height: 25vh;
+  overflow-y: auto;
 }
 
 .bookingsTableDropdown > ul > li {
-    list-style: none;
-    padding: 1vh 1vw;
-    color: #2494d1;
-    font-size: 13px;
+  list-style: none;
+  padding: 1vh 1vw;
+  color: #2494d1;
+  font-size: 13px;
 }
 
-.bookingsTableDropdown > ul > li:hover{
-    background-color: #bedcf8;
-    color: #fff;
+.bookingsTableDropdown > ul > li:hover {
+  background-color: #bedcf8;
+  color: #fff;
 }
 
-.bookingsTableDropdownTopText{
-    position: absolute;
-    top: -12px;
-    background-color: #fff;
-    font-size: small;
-    padding: 0 0.5vw;
-    left: 5px;
-    font-stretch:extra-expanded;
+.bookingsTableDropdownTopText {
+  position: absolute;
+  top: -12px;
+  background-color: #fff;
+  font-size: small;
+  padding: 0 0.5vw;
+  left: 5px;
+  font-stretch: extra-expanded;
 }
 
-.bookingsTableHeadingRow{
-    font-size: 13px;
-    background-color: #2494d1;
-    padding: 1.5vh 0;
-    color: #fff;
-    margin: 0;
+.bookingsTableHeadingRow {
+  font-size: 13px;
+  background-color: #2494d1;
+  padding: 1.5vh 0;
+  color: #fff;
+  margin: 0;
 }
 
-.bookingsTableHeadingRow > div{
-    text-align: center;
-    display: flex;
-    align-items: center;
+.bookingsTableHeadingRow > div {
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .bookingsTableHeadingRow > div > span {
-    width: 100%;
+  width: 100%;
 }
 
-.bookingsTableInnerRow{
-    font-size: 13px;
-    background-color: #bedcf8;
-    padding: 1.5vh 0;
-    color: black;
-    margin: 0;
-    border-right: 2px solid #66add3;
-    border-left: 2px solid #66add3;
-    border-bottom: 2px solid #66add3;
+.bookingsTableInnerRow {
+  font-size: 13px;
+  background-color: #bedcf8;
+  padding: 1.5vh 0;
+  color: black;
+  margin: 0;
+  border-right: 2px solid #66add3;
+  border-left: 2px solid #66add3;
+  border-bottom: 2px solid #66add3;
 }
 
-.bookingsTableInnerRow > div{
-    text-align: center;
-    display: flex;
-    align-items: center;
+.bookingsTableInnerRow > div {
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .bookingsTableInnerRow > div > span {
-    width: 100%;
+  width: 100%;
 }

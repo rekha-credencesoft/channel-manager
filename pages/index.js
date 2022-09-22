@@ -1,12 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from "react"
-import Login from './login';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import Login from "./login";
 
 const Home = () => {
-
   return (
     <div>
       <Head>
@@ -16,7 +15,7 @@ const Home = () => {
       </Head>
       <Login />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

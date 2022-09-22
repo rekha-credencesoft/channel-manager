@@ -1,6 +1,6 @@
 .outerContainer {
-  height: 100vh; 
-  position: relative; 
+  height: 100vh;
+  position: relative;
   width: 100vw;
 }
 @media (max-width: 2000px) {
@@ -80,7 +80,6 @@
   margin: 0;
 }
 
-
 .dates {
   flex: 8;
   align-items: flex-end;
@@ -139,8 +138,8 @@
 .button {
   border: none;
   padding: 0px 10px;
-  background-color: #1D174D;
-  border: 1px solid #1D174D;
+  background-color: #1d174d;
+  border: 1px solid #1d174d;
   border-radius: 6px;
   position: relative;
 }
@@ -161,7 +160,7 @@
 
 .button:hover {
   position: relative;
-  background-color: #1D174D;
+  background-color: #1d174d;
 }
 .buttons {
   flex: 9;
@@ -240,7 +239,6 @@
   border-bottom: 1px solid #ddd;
   font-weight: 450;
 }
-
 
 .col {
   text-align: center;
@@ -499,7 +497,7 @@
 
 .ratePlanDrop > li:hover {
   background-color: hsl(247, 35%, 25%);
-  color: white;;
+  color: white;
   color: white;
 }
 
@@ -702,10 +700,10 @@
 }
 
 .findRatesButton {
-  border: 1px solid #1D174D;
+  border: 1px solid #1d174d;
   text-align: center;
   margin: 0;
-  background-color: #1D174D;
+  background-color: #1d174d;
   color: white;
   border-radius: 5px;
   font-size: 13px;
@@ -720,13 +718,15 @@
   align-items: center;
 }
 
-.ratesInput, .plansInput, .availabilityInput{
+.ratesInput,
+.plansInput,
+.availabilityInput {
   width: 50px;
   border: #0061b9;
   margin: auto;
 }
 
-.editButton{
+.editButton {
   background-color: #00427d;
   color: #fff;
   padding: 5px 10px;
@@ -757,20 +757,19 @@
   align-items: center;
 }
 
-.roomsAndPlansPrices{
+.roomsAndPlansPrices {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.roomsAndPlansPricesSpan{
+.roomsAndPlansPricesSpan {
   display: flex;
   justify-content: left;
   align-items: left;
   padding: 5px 2px;
   font-weight: 600;
   border-top: 1px solid #ddd;
-
 }
 /* 
 .roomsAndPlansPricesSpan > span{

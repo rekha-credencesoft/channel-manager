@@ -19,10 +19,10 @@ function NavBar(props) {
     setBthList(!bthList);
   };
 
-  const logOutFunction = ()=>{
+  const logOutFunction = () => {
     localStorage.removeItem("token");
-    router.push('/')
-  }
+    router.push("/");
+  };
 
   return (
     <div className={styles.navbarContainer}>
@@ -83,10 +83,10 @@ function NavBar(props) {
               </li>
             </Link>
             {/* <Link href="/" onClick={()=>{localStorage.removeItem("token")}}> */}
-              <li className="flex gap-2" onClick={logOutFunction}>
-                <AiOutlineLogout className="h-6" />
-                <span>Logout</span>
-              </li>
+            <li className="flex gap-2" onClick={logOutFunction}>
+              <AiOutlineLogout className="h-6" />
+              <span>Logout</span>
+            </li>
             {/* </Link> */}
           </div>
           {/* </div> */}
