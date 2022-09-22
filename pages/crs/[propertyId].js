@@ -402,7 +402,7 @@ export default function PropertyId() {
                     <DatePicker
                       size="small"
                       placeholder="From Date"
-                      className="h-8 w-36"
+                      className="h-8 w-24"
                       onChange={(value) => {
                         const fromDate = moment(value).format("YYYY-MM-DD");
                         setCurrentdate(fromDate);
@@ -414,7 +414,7 @@ export default function PropertyId() {
                     <DatePicker
                       placeholder="To Date"
                       size="small"
-                      className="h-8 w-36"
+                      className="h-8 w-24"
                       onChange={(value) => {
                         const endDate = moment(value).format("YYYY-MM-DD");
                         setSeventhDayDate(endDate);
@@ -430,7 +430,7 @@ export default function PropertyId() {
                     SEARCH
                   </button>
                 </Col>
-                <span className="py-1 -ml-10">
+                <Col className="py-1 -ml-10">
                   <GrRotateLeft
                     className="text-gray-200"
                     onClick={() => {
@@ -468,7 +468,7 @@ export default function PropertyId() {
                       }}
                     />
                   )}
-                </span>
+                </Col>
               </Col>
               <Col className={styles.dates}>
                 <Row className={styles.dateCards}>

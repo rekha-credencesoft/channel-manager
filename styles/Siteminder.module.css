@@ -1,6 +1,12 @@
 .outerContainer {
-  /* height: 100vh; */
-  /* position: relative; */
+  height: 100vh; 
+  position: relative; 
+  width: 100vw;
+}
+@media (max-width: 2000px) {
+  .outerContainer {
+    width: 100%;
+  }
 }
 
 .bigContainer {
@@ -74,8 +80,10 @@
   margin: 0;
 }
 
+
 .dates {
   flex: 8;
+  align-items: flex-end;
   border-top: 1px solid #cee4f8;
   border-bottom: 1px solid #cee4f8;
   padding: 0;
@@ -89,14 +97,14 @@
 .dateSelector {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   flex: 4;
-  border-right: 1px solid #eaf5ff;
+  /* border-right: 1px solid #eaf5ff; */
   border-bottom: 1px solid #cee4f8;
   align-items: center;
-  font-size: 20px;
+  /* font-size: 20px; */
   color: #2494d1;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .dateSelector > span {
@@ -112,6 +120,7 @@
   line-height: 24px;
   padding: 5px 0;
   border-right: 1px solid #eaf5ff;
+  border-left: 1px solid #eaf5ff;
 }
 
 .dateCard > span {
